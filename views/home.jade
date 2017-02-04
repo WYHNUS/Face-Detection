@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  form(action='/processImage', enctype="multipart/form-data", method='post')
-    input(type="file" capture="camera" accept="image/*" id="camera-input" name="camera-input")
-    input(type="submit" value="submit")
+  form(action='/', enctype="multipart/form-data", method='post')
+    input(type="file" capture="camera" accept="image/*" id="camera-input" name="camera-input" required)
+    input(type="submit" value="detect!")
     img(id="image")
 
   script(src="https://code.jquery.com/jquery-3.1.1.min.js")

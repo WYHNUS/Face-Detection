@@ -1,4 +1,12 @@
 extends layout
 
 block content
-  p="Processing Result:"
+  form(action='/' method='get')
+    input(type="submit" value="Try again!" style="float: right; margin-right: 20%;")
+
+  div(class="notification-wrapper")
+    if detectedFaces > 1
+      p #{detectedFaces} faces detected
+    else
+      p #{detectedFaces} face detected
+  img(id="result-image" src="#{imageUrl}")
